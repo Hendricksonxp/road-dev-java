@@ -4,8 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePageObject {
 
-    public HomePage(WebDriver driver) {
+    public HomePage(final WebDriver driver) {
         super(driver);
-        url = "http://localhost:8085";
+        url = "http://localhost:8080";
     }
 }
