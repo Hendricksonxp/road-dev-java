@@ -48,11 +48,11 @@
     function checkPassword() {
         var theUsername = document.getElementById("username").value;
         var thePassword = document.getElementById("password").value;
-        if (theUsername == "user" && thePassword == "pass") {
+        if (theUsername === "user" && thePassword === "pass") {
             document.getElementById("message").innerHTML = "Welcome";
             window.location.href = "welcome";
         }
-        else if (theUsername.length == 0) {
+        else if (theUsername.length === 0) {
             document.getElementById("message").innerHTML = "Missing Username"
         }
         else {
