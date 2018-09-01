@@ -23,10 +23,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-tomcat'
     providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper:8.5.32'
     implementation 'org.seleniumhq.selenium:selenium-java:3.14.0'
-    implementation 'javax.servlet:jstl:1.2'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'io.cucumber:cucumber-java:3.0.2'
+    testImplementation 'io.cucumber:cucumber-java8:3.0.2'
     testImplementation 'io.cucumber:cucumber-junit:3.0.2'
     testImplementation 'io.cucumber:cucumber-spring:3.0.2'
     providedCompile 'javax.servlet:jstl:1.2'
