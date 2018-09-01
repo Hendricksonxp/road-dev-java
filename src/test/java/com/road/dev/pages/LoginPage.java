@@ -10,9 +10,9 @@ public class LoginPage extends BasePageObject {
     private final By submitLocator = By.id("submit");
     private final By messageLocator = By.id("message");
 
-    public LoginPage(final WebDriver driver) {
+    public LoginPage(final WebDriver driver, int port) {
         super(driver);
-        url = "http://localhost:8080/login";
+        url = "http://localhost:" + port +"/login";
     }
 
     public void login(final String username, final String password) {

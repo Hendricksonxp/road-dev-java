@@ -2,21 +2,26 @@ package com.road.dev;
 
 import com.road.dev.pages.LoginPage;
 import com.road.dev.pages.WelcomePage;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Ignore;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class MyStepdefs {
 
-    private final LoginPage loginPage;
-    private final WelcomePage welcomePage;
+@Ignore
+public class MyStepdefs extends SpringIntegrationTest {
 
-    public MyStepdefs() {
-        loginPage = new LoginPage(Hooks.driver);
+    private LoginPage loginPage;
+    private WelcomePage welcomePage;
+
+    @Before
+    public void initializePageObjects() {
+        loginPage = new LoginPage(Hooks.driver, port);
         welcomePage = new WelcomePage(Hooks.driver);
     }
 
