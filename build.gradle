@@ -24,10 +24,10 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:3.13.0'
     implementation 'javax.servlet:jstl:1.2'
 
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
-    testCompile 'io.cucumber:cucumber-java:2.3.1'
-    testCompile 'io.cucumber:cucumber-junit:2.3.1'
-    testCompile 'io.cucumber:cucumber-spring:2.3.1'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.cucumber:cucumber-java:2.3.1'
+    testImplementation 'io.cucumber:cucumber-junit:2.3.1'
+    testImplementation 'io.cucumber:cucumber-spring:2.3.1'
     providedCompile 'javax.servlet:jstl:1.2'
 }
 
