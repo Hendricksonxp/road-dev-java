@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 @Ignore
-public class MyStepdefs extends SpringIntegrationTest {
+public class RoadStepDefs extends SpringIntegrationTest {
 
     private WebDriver driver;
     private LoginPage loginPage;
