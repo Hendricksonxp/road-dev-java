@@ -31,7 +31,7 @@ public class RoadStepDefs extends SpringIntegrationTest {
 
     private void setupWebDriver() {
         final ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.setHeadless(true);
         driver = new ChromeDriver(options);
     }
 
