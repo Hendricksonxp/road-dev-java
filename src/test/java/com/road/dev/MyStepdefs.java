@@ -8,6 +8,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Ignore;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -16,13 +18,15 @@ import static org.junit.Assert.assertTrue;
 @Ignore
 public class MyStepdefs extends SpringIntegrationTest {
 
+    private final static WebDriver driver = new ChromeDriver();
+
     private LoginPage loginPage;
     private WelcomePage welcomePage;
 
     @Before
     public void initializePageObjects() {
-        loginPage = new LoginPage(Hooks.driver, port);
-        welcomePage = new WelcomePage(Hooks.driver);
+        loginPage = new LoginPage(driver, port);
+        welcomePage = new WelcomePage(driver);
     }
 
     @Given("^I am on the login page$")
