@@ -11,6 +11,7 @@ import cucumber.api.java.en.When;
 import org.junit.Ignore;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -23,11 +24,22 @@ public class RoadStepDefs extends SpringIntegrationTest {
     private WelcomePage welcomePage;
 
     @Before
-    public void initializePageObjects() {
-        driver = new ChromeDriver();
+    public void init() {
+        setupWebDriver();
+        setupPageObjects();
+    }
+
+    private void setupWebDriver() {
+        final ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
+    }
+
+    private void setupPageObjects() {
         loginPage = new LoginPage(driver, port);
         welcomePage = new WelcomePage(driver);
     }
+
 
     @After
     public void shutdownBrowser() {
