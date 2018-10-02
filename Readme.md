@@ -1,5 +1,17 @@
 This is a project for a workshop.
 
+Prerequisites
+-------------
+* JDK 8 (JDK, not JRE) - validate by running `javac` from the command line
+* IntelliJ
+* Heroku Command Line
+* Git Command Line for Windows
+* Homebrew for Mac
+ 
+General Guidance
+----------------
+On windows, be sure to run all the commands within the 'Git Bash' terminal
+
 The build the application you should execute:
 
   Mac/Linux: `./gradlew clean build`
